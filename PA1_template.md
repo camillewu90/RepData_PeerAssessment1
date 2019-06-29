@@ -219,7 +219,7 @@ activity.imputed2$interval<-as.numeric(as.character(activity.imputed2$interval))
 library(ggplot2)
 ggplot(data=activity.imputed2,
        aes(x=interval,y=MeanSteps.Int.Dty))+
-        facet_grid(.~ daytype)+
+        facet_grid(daytype~.)+
         geom_line()+
         xlab("Interval")+
         ylab("Average Number of Steps Taken")+
